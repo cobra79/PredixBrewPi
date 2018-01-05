@@ -1,0 +1,15 @@
+---
+applications:
+- name: PredixBrewPi
+env:
+  PREDIX_APP_CLIENT_ID: app_client
+  PREDIX_APP_CLIENT_SECRET:
+  PREDIX_DATA_TIMESERIES_INGEST_URI: wss://gateway-predix-data-services.run.aws-usw02-pr.ice.predix.io/v1/stream/messages
+  PREDIX_DATA_TIMESERIES_INGEST_ZONE_ID: 2c50d280-f5f1-4cf2-9f7d-09cc6cdc556f
+  PREDIX_DATA_TIMESERIES_QUERY_URI: https://time-series-store-predix.run.aws-usw02-pr.ice.predix.io
+  PREDIX_DATA_TIMESERIES_QUERY_ZONE_ID: 2c50d280-f5f1-4cf2-9f7d-09cc6cdc556f
+  PREDIX_SECURITY_UAA_URI: https://37713f54-abec-4fa3-9798-c82031369882.predix-uaa.run.aws-usw02-pr.ice.predix.io
+  PREDIX_SECURITY_UAA_URI: https://657fae80-d897-4c5a-baba-44de10c7bab5.predix-uaa.run.aws-usw02-pr.ice.predix.io
+
+services:
+- brew_ts
