@@ -15,15 +15,14 @@ dtover=w1-gpio, gpiopin=4
 
 Connect the DS18B20 sensors to the Raspberry PI.
 
-A the sensor is using a bus system all sensors can be connected in parallel.
+As the sensor is using a bus system all sensors can be connected to the same pins.
 Only 3 pins of the Raspberry Pi are required:
-Power supply - I am using the 5V output / other setups are making use of the 3.3V output
-Ground (GND)
-A data pin - I am using pin 1 connected the 5V with a 4.7K Ohm resistor
+Power supply - I am using the 5V output, Ground (GND) and a data pin.
+In my setup pin 1 is connected to 5V with a 4.7K Ohm resistor.
 
+Each DS18B20 has a unique ID, that needs to be added to the manifest.yml,
 You can get the IDs of the sensors with:
 cat /sys/devices/w1_bus_master1/w1_master_slaves
-These IDs (second part only) have to be copied in the manifest.yml to define which sensor belongs to which asset.
 
 
 
